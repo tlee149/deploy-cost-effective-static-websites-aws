@@ -622,6 +622,14 @@ At the very bottom of `contact.astro`, paste the following script to stop the pa
 
 Click `Commit changes`.
 
+**Expected result:** You should be able to submit a contact form, and the form should submit successfully and the data should be sent to the listed inbox.
+
+### Step 6 — Custom Domain Integration
+Now you can link a custom domain to your static website. 
+
+TODO
+
+
 
 
 
