@@ -141,17 +141,13 @@ Note: This will need to be done per website. It is better to have a CloudFront d
 
 In the Amazon Console, navigate to the `CloudFront` service. You will see that the region is `Global`. This is because CloudFront is a global service. Click `Create distribution`.
 
-Add a distribution name that is related to the specific domain it serves (e.g., `hsu-com-au` if serving the `hsu.com.au` website).
+Add a distribution name that is related to the specific domain it serves (e.g., `hsu-com-au` if serving the `hsu.com.au` website). Ensure that `Distribution type` is `Single website configuration`. Click `Next`.
 
-Ensure that `Distribution type` is `Single website configuration`.
-
-Click `Next` to get to the `Specify origin` step.
-
-Select `Amazon S3` for `Origin type`. In the `Origin` section, enter `hsu-static-website-assets` under `S3 origin` (or select it from the `Browse S3` button). Ensure that in the `Settings` section, `Allow private S3 bucket access to CloudFront` is checked. and leave the default settings for `Origin settings` and `Cache settings`. Click `Next`.
+Select `Amazon S3` for `Origin type`. In the `Origin` section, enter `hsu-static-website-assets` under `S3 origin` (or select it from the `Browse S3` button). Ensure that in the `Settings` section, `Allow private S3 bucket access to CloudFront` is checked and leave the default settings for `Origin settings` and `Cache settings`. Click `Next`.
 
 In the `Web Application Firewall (WAF)`, select `Do not enable security protections`. As these are simple static websites, we will not need the advanced security features of WAF and can save costs by implementing other security measures (e.g., AWS Certificate Manager (ACM) for SSL certificate management, Route 53 for domain name management, etc.). Click `Next`.
 
-Select `Create distribution`. You will then be redirected to the newly created distribution's page. Under the `General` tab, and `Settings` section, click `Edit`.
+Click `Create distribution`. You will then be redirected to the newly created distribution's page. In the `General` tab, under the `Settings` section, click `Edit`.
 
 TODO: "Skip Custom Domains (For Now): You will see a box for Alternate domain name (CNAME) and Custom SSL certificate. Leave these blank for now. We cannot fill these in until we create your free SSL certificate using AWS Certificate Manager (ACM). We will come back and edit this later."
 
